@@ -32,6 +32,12 @@ class Calculate
             $total_price = $price * $days;
         }
 
+        $services_price = 0;
+        foreach ($selected_services as $service) {
+            $services_price += (float)$service * $days;
+        }
+
+        $total_price += $services_price;
 
         echo $total_price;
     }
